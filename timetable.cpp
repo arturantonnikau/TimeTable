@@ -1,12 +1,10 @@
-#include "timetable.h"
-
+#include <iostream>
 #include <string>
 #include <list>
-#include <iostream>
 #include <fstream>
 #include <sstream>
 #include <functional>
-#include <algorithm>
+#include "timetable.h"
 
 
 void TimeTable::modTimeTable(){
@@ -33,17 +31,14 @@ void TimeTable::modTimeTable(){
                 }
             }
             if(it->i_dep==it_next->i_dep && it->i_arr<it_next->i_arr){//starts at the same time and reaches earlier
-                //std::cout<<"FIND 1";
                 listElem.erase(it_next);
                 break;
             }
             if(it->i_dep<it_next->i_dep && it->i_arr==it_next->i_arr){// starts later and reaches at the same time
-                    //std::cout<<"FIND 2";
                     listElem.erase(it);
                     break;
              }
             if(it->i_dep<it_next->i_dep && it->i_arr>it_next->i_arr){//starts later and reaches earlier
-                    std::cout<<"FIND 3";
                     listElem.erase(it);
                     break;
             }

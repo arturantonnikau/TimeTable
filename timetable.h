@@ -18,11 +18,10 @@ struct timeTableElem{//struct describe TimeTableRows
 };
 
 
-class TimeTable{//cl
+class TimeTable{//main Class
 private:
     unsigned int count=0;
     std::string line;
-    static int countElem;
     std::list<timeTableElem> listElem;//TimeTableElement list
 public:
     void modTimeTable();//main meth. which modified TimeTable
