@@ -3,7 +3,7 @@
 
 int main()
 {
-    TimeTable obj;
+    TimeTable obj;//create TimeTable
     obj.read();
     obj.display();
     obj.modTimeTable();
